@@ -1,0 +1,14 @@
+spring:
+  application:
+    #此处的配置文件名称为nacos配置中心的名称
+    name: nacos-consumer-config
+  cloud:
+    nacos:
+      config:
+        #指定查找名为nacos-consumer-config.yaml的配置文件
+        file-extension: yaml
+        #nacos server的地址
+        server-addr: 127.0.0.1:8848
+  profiles:
+    #激活多环境配置中的哪一个配置 在nacos的配置中心寻找nacos-consumer-config-prod的配置文件
+    active: prod
